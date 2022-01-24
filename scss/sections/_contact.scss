@@ -1,0 +1,25 @@
+#contact {
+    a {
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        transition: 250ms ease;
+    }
+
+    a::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        transition: 450ms ease;
+        background: $near-black;
+    }
+
+    a:hover::after {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}

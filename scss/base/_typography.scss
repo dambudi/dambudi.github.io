@@ -1,0 +1,26 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    color: $near-black;
+    // color: black;
+    line-height: 1.35;
+}
+
+h2,
+h3,
+h4 {
+    font-weight: 600;
+}
+
+p {
+    max-width: 600px;
+}
+
+a {
+    color: #888;
+    transition: 150ms ease;
+}
+
+a:hover {
+    color: $near-black;
+}
