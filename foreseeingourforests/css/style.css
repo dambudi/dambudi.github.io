@@ -1,0 +1,631 @@
+/* Base */
+/*  RESETS */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header,
+main,
+footer,
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: omnes-pro, sans-serif;
+  font-size: 1.25rem;
+  color: #195613;
+}
+
+h1,
+h2,
+h3 {
+  font-family: kansasnew, serif;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+a {
+  -webkit-transition: 150ms ease;
+  transition: 150ms ease;
+}
+
+/* Components */
+.next-section {
+  margin-top: 32px;
+  height: 48px;
+  width: 48px;
+  border: none;
+  border-radius: 24px;
+  background-color: transparent;
+  -webkit-transition: 100ms ease;
+  transition: 100ms ease;
+  text-align: center;
+}
+
+.next-section .material-icons {
+  color: #f0f6df;
+  font-size: 24pt;
+  line-height: 36pt;
+}
+
+.next-section.alt .material-icons {
+  color: #195613;
+}
+
+.next-section:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.next-section.alt:hover {
+  background-color: rgba(25, 86, 19, 0.2);
+}
+
+.button {
+  margin-top: 32px;
+  padding: 16px;
+  border-radius: 32px;
+  text-decoration: none;
+  color: #f0f6df;
+  -webkit-transition: 150ms ease;
+  transition: 150ms ease;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.button:hover {
+  border: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.button.alt {
+  background-color: #195613;
+}
+
+.button.alt:hover {
+  background-color: #477842;
+}
+
+/* Layout */
+header nav {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 100;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 2px solid #f0f6df;
+  border-right: 0;
+  overflow: hidden;
+  background-color: #1c400a;
+}
+
+header nav ul li {
+  list-style: none;
+  width: 32px;
+  height: 32px;
+}
+
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #f0f6df;
+  height: 100%;
+  text-align: center;
+  line-height: 32px;
+  font-weight: 600;
+  font-family: kansasnew, serif;
+  -webkit-transition: 150ms ease;
+  transition: 150ms ease;
+}
+
+header nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+header nav ul li a.selected {
+  -webkit-animation: fadeIn 0.25s ease;
+          animation: fadeIn 0.25s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+section {
+  min-height: 100vh;
+  /*     background-image: url(../images/background_004.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+/* section:nth-child(odd) {
+    background-image: url(../images/background_005.jpg);
+} */
+.intro,
+.outro {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro {
+  background-image: url(../images/background_001.jpg);
+  background-color: #195613;
+  color: #f0f6df;
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-wrapper .text-wrapper {
+  max-width: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.forests #forests {
+  background-image: url(../images/background_004.jpg);
+  background-color: #f0f6df;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.forests .grid .main-wrapper {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% 65%;
+      grid-template-columns: 35% 65%;
+      grid-template-areas: "natural-soil forest-graph" "cultivated-soil forest-graph" "natural-biomass forest-graph" "cultivated-biomass forest-graph";
+}
+
+.forests .grid .main-wrapper #natural-soil {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: natural-soil;
+}
+
+.forests .grid .main-wrapper #cultivated-soil {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: cultivated-soil;
+}
+
+.forests .grid .main-wrapper #natural-biomass {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: natural-biomass;
+}
+
+.forests .grid .main-wrapper #cultivated-biomass {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: cultivated-biomass;
+}
+
+.forests .grid .main-wrapper #forest-graphs {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 2;
+  grid-area: forest-graph;
+  min-height: 360vh;
+  padding-right: 128px;
+}
+
+.forests .grid .main-wrapper #forest-graphs canvas {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15%;
+}
+
+.forests .grid .main-wrapper #natural-soil,
+.forests .grid .main-wrapper #cultivated-soil,
+.forests .grid .main-wrapper #natural-biomass,
+.forests .grid .main-wrapper #cultivated-biomass {
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.forests .grid .main-wrapper .text-wrapper {
+  margin: 0 0 0 auto;
+  padding: 64px;
+  max-width: 500px;
+}
+
+.forests .grid .main-wrapper .text-wrapper h2 {
+  text-align: left;
+  width: 100%;
+}
+
+.comparison {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* Aspect ratio */
+}
+
+.comparison img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.comparison .map {
+  width: 100%;
+  height: 100%;
+}
+
+.comparison .map-2,
+.comparison .map-3,
+.comparison .map-4,
+.comparison .map-5 {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  -webkit-transform: translate(100%, 0px);
+          transform: translate(100%, 0px);
+}
+
+.comparison .map-2 img,
+.comparison .map-3 img,
+.comparison .map-4 img,
+.comparison .map-5 img {
+  -webkit-transform: translate(-100%, 0px);
+          transform: translate(-100%, 0px);
+}
+
+.map-explanation {
+  position: relative;
+  z-index: 50;
+  /*     .explain-1.hide,
+    .explain-2.hide,
+    .explain-3.hide {
+        opacity: 0;
+    } */
+}
+
+.map-explanation .text-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  max-width: 500px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 32px 64px;
+  pointer-events: none;
+}
+
+.history #history {
+  background-image: url(../images/background_002.jpg);
+  background-color: #195613;
+}
+
+.history #history,
+.history .today {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f0f6df;
+}
+
+.history .grid .main-wrapper {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% 65%;
+      grid-template-columns: 35% 65%;
+      grid-template-areas: "recent history-graph" "afforestation history-graph" "deforestation history-graph";
+}
+
+.history .grid .main-wrapper #recent {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: recent;
+}
+
+.history .grid .main-wrapper #afforestation {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: afforestation;
+}
+
+.history .grid .main-wrapper #deforestation {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: deforestation;
+}
+
+.history .grid .main-wrapper #history-graphs {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: history-graph;
+  min-height: 270vh;
+  padding-right: 128px;
+}
+
+.history .grid .main-wrapper #history-graphs canvas {
+  height: 500px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15%;
+}
+
+.history .grid .main-wrapper #recent,
+.history .grid .main-wrapper #afforestation,
+.history .grid .main-wrapper #deforestation {
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.history .grid .main-wrapper .text-wrapper {
+  margin: 0 0 0 auto;
+  padding: 64px;
+  max-width: 500px;
+}
+
+.history .grid .main-wrapper .text-wrapper h2 {
+  text-align: left;
+  width: 100%;
+}
+
+.history .today {
+  background-image: url(../images/background_001.jpg);
+  background-color: #195613;
+}
+
+.future #restoration,
+.future #what {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.future #restoration,
+.future #what,
+.future #progress .text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 64px;
+}
+
+.future #restoration {
+  background-image: url(../images/background_001.jpg);
+  background-color: #195613;
+  color: #f0f6df;
+}
+
+.future #what {
+  background-image: url(../images/background_004.jpg);
+  background-color: #f0f6df;
+}
+
+.future #progress {
+  padding: 128px 0;
+}
+
+.outro {
+  background-image: url(../images/background_002.jpg);
+  background-color: #195613;
+  color: #f0f6df;
+}
+
+.outro .resources {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
+  z-index: 150;
+  pointer-events: none;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
+}
+
+.outro .resources .resource-popout {
+  background-image: url(../images/background_002.jpg);
+  background-color: #195613;
+  position: fixed;
+  top: 100vh;
+  right: 50%;
+  -webkit-transform: translate(50%, 0%);
+          transform: translate(50%, 0%);
+  padding: 32px 64px 64px 64px;
+  border-radius: 32px;
+  border: 2px solid #f0f6df;
+  z-index: 200;
+  -webkit-transition: 350ms ease;
+  transition: 350ms ease;
+}
+
+.outro .resources .resource-popout h2 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.outro .resources .resource-popout a {
+  color: #f0f6df;
+}
+
+.outro .resources .resource-popout a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.outro .resources .resource-popout .next-section {
+  position: absolute;
+  top: 48px;
+  right: 32px;
+  margin: 0;
+}
+
+.outro .resources.show {
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: all;
+}
+
+.outro .resources.show .resource-popout {
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.grid .main-wrapper,
+#progress {
+  background-image: url(../images/background_000.jpg);
+  background-color: white;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  padding: 8px 16px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */

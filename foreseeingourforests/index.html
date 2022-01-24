@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <title>Foreseeing Our Forests</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bog7qjs.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro" id="nav-1">1</a></li>
+                <li><a href="#forests" id="nav-2">2</a></li>
+                <li><a href="#history" id="nav-3">3</a></li>
+                <li><a href="#future" id="nav-4">4</a></li>
+                <li><a href="#outro" id="nav-5">5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro" id="intro">
+            <div class="main-wrapper">
+                <div class="text-wrapper">
+                    <h1>Foreseeing Our Forests</h1>
+                    <h2>It's no secret that human activity has made a destructive impact on the health of the Earth.</h2>
+                    <p>The effects of the climate crisis are growing to be more devastating and its implications affect essentially every aspect of life. Increasing global temperatures have led to more powerful natural disasters costing human lives and rising sea levels threatening livelihoods.</p>
+                    <p>Here in Aotearoa, we are also quite vulnerable. As an island nation, many of the country's population who live near the coastlines will experience frequent flooding, while people living inland will experience more wildfires.</p>
+                    <a href="#forests" class="next-section">
+                        <span class="material-icons">expand_more</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="forests">
+            <div class="main-wrapper" id="forests">
+                <div class="text-wrapper">
+                    <h2>The trees and the forests</h2>
+                    <p>The trees and forests of Aotearoa play an important role in the biodiversity of our beautiful environment.</p>
+                    <p>Trees absorb carbon dioxide through photosynthesis and release oxygen into the atmosphere for us to breathe. They also perform another important process called "sequestration" by storing the carbon in their biomass. This sequestration is one way of mitigating the effects of climate change, as it takes away the harmful greenhouse gas of carbon dioxide which would otherwise contribute to raising the temperatures of the planet.</p>
+                    <p>We have gathered data from New Zealand detailing the changes to Aotearoa's forests that have
+                        occurred
+                        over the past 25 years.</p>
+                    <a href="#natural-soil" class="next-section alt">
+                        <span class="material-icons">expand_more</span>
+                    </a>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="main-wrapper">
+                    <div id="natural-soil">
+                        <div class="text-wrapper">
+                            <h2>Soil in natural forests</h2>
+                            <p>Organisms in soil produce carbon dioxide in a process called soil respiration. This is a part of the natural carbon cycle. Plants also respire carbon dioxide from their roots below ground.
+                            </p>
+                            <a href="#cultivated-soil" class="next-section alt">
+                                <span class="material-icons">expand_more</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="cultivated-soil">
+                        <div class="text-wrapper">
+                            <h2>Soil in cultivated timber</h2>
+                            <p>Notably, cultivated timber produces more carbon dioxide than natural forests. Most of the carbon dioxide that was stored in a tree is released into the atmosphere when it is cut down. Therefore, cutting trees down is a fundamental part of cultivating timber.</p>
+                            <p>This shows just how damaging the clearing of forests is for our carbon emissions. We can't rely on planting trees that will eventually be cut down.</p>
+                            <a href="#natural-biomass" class="next-section alt">
+                                <span class="material-icons">expand_more</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="natural-biomass">
+                        <div class="text-wrapper">
+                            <h2>Biomass in natural forests</h2>
+                            <p>Trees sequester and store carbon in their biomass. This includes stems, branches and leaves above ground and root systems below ground. Mature trees in natural forests store a lot of carbon, which helps offset our carbon emissions.</p>
+                            <a href="#cultivated-biomass" class="next-section alt">
+                                <span class="material-icons">expand_more</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="cultivated-biomass">
+                        <div class="text-wrapper">
+                            <h2>Biomass in cultivated timber</h2>
+                            <p>Interestingly, trees for cultivated timber sequester even more so than those in natural forests. This is because of the nature of cultivated timber; fast-growing trees are grown to be harvested, then replanted again and again as part of the cycle.</p>
+                            <a href="#history" class="next-section alt">
+                                <span class="material-icons">expand_more</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="forest-graphs">
+                        <canvas id="forest-graph" width="800" height="400" aria-label="New Zealand Forest Carbon Stocks" role="img">
+                            <p>Your browser does not support the canvas element.</p>
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="history">
+            <div class="main-wrapper" id="history">
+                <div class="text-wrapper">
+                    <h2>Our forests are amazing.</h2>
+                    <p>As you can see, the forests of New Zealand play an important role in the biodiversity of our beautiful environment. Trees help the planet by absorbing harmful carbon emissions and cooling the earth. As important natural habitats, forests support many of New Zealand’s ecosystems including native species of birds and plants. Forests also prevent many natural disasters such as floods and generally improve our health.</p>
+                    <p>New Zealand is known for its clean, green image of clean rivers and green scenery. Internationally, the country is seen as a natural paradise. The reality, however, is rather different in many ways.</p>
+                    <p>Much of our native forest has been lost to farmland and urban development since humans settled here centuries ago. This loss of forest has proven to be devastating, especially considering the ability of forests to combat growing carbon emissions. To understand how our environment has degraded to this point, we must have a look at a timeline of New Zealand’s forests.</p>
+                    <a href="#timeline" class="next-section">
+                        <span class="material-icons">expand_more</span>
+                    </a>
+                </div>
+            </div>
+            <div class="comparison" id="timeline">
+                <div class="map map-1">
+                    <img src="images/map_001.png" alt="">
+                </div>
+
+                <div class="map map-2">
+                    <img src="images/map_001.png" alt="">
+                </div>
+
+                <div class="map map-3">
+                    <img src="images/map_002.png" alt="">
+                </div>
+
+                <div class="map map-4">
+                    <img src="images/map_003.png" alt="">
+                </div>
+
+                <div class="map map-5">
+                    <img src="images/map_003.png" alt="">
+                </div>
+            </div>
+            <div class="map-explanation">
+                <div class="explain-1 text-wrapper">
+                    <h2>1200</h2>
+                    <p>For most of its history, the land of New Zealand was untouched by humans. Māori only settled here around 700 years ago in the 1200s, a relatively recent time ago. Having been one of the last landmasses to be discovered, the forests of New Zealand show a clear example of the effects of mankind on the surrounding environment. </p>
+                    <p>The landscape of New Zealand was historically dominated by forests with trees covering almost every bit of land - a sea of green of sorts. Native forests covered 80% of the land before humans arrived. The remainder of the land was made up of mountainous areas where trees couldn’t grow.</p>
+                </div>
+                <div class="explain-2 text-wrapper">
+                    <h2>1840</h2>
+                    <p>When Māori settled in New Zealand they started altering the landscape. Over the next few centuries, a considerable amount of forest cover was lost on the coastlines. Māori settled in these areas and burned 6.7 million hectares of forest.</p>
+                    <p>By the time of European arrival around 1840, the amount of forest cover had reduced to 53%. Much of the country was still covered in dense native forests around then, although this would change with the arrival of European settlers.</p>
+                </div>
+                <div class="explain-3 text-wrapper">
+                    <h2>2021</h2>
+                    <p>The deforestation Māori did over some 600 years, European settlers did even more within a century. Many of New Zealand’s dense forests were slashed and burned to prepare land for agriculture and urban development. Trees were cut down to supply construction for a growing population.</p>
+                    <p>Farmers were paid incentives by the government to clear trees to make way for farmland. Many settlers were granted land by the government if they could clear a sufficient amount of forest from their land. Much of this land was stolen from Māori by the government, an act that violated the Treaty of Waitangi.</p>
+                </div>
+            </div>
+            <div class="main-wrapper today">
+                <div class="text-wrapper">
+                    <h2>Our forests today</h2>
+                    <p>To the colonists of the past, the drastic landscape changes were considered a “triumph of progress”. Forests were seen as less productive and profitable than the farmland that replaced them.</p>
+                    <p>Today, forests cover only 30% of New Zealand’s landscape and native forests only 24%. Half of the total land that makes up New Zealand is now farmland, forests cover only pockets of land around the country - a stark contrast from only a few centuries before where forests covered almost every inch they could.</p>
+                    <a href="#recent" class="next-section">
+                        <span class="material-icons">expand_more</span>
+                    </a>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="main-wrapper">
+                    <div id="recent">
+                        <div class="text-wrapper">
+                            <h2>The last thirty years</h2>
+                            <p>Since the boom of deforestation in the 1800s, New Zealand has changed its attitude towards its forests.</p>
+                            <p>Nowadays timber companies must prove their practices are sustainable. The Scenery Preservation Act of 1903 was the earliest legislation that sought to preserve forests as part of the landscape’s beauty for tourism purposes. Once threatened by logging, Pureora Forest Park in the North Island was saved from destruction in 1978 and is now one of the largest parcels of native forest.</p>
+                            <p>Other forests around the country such as Waipoua, Hinewai and the Waitakere Ranges have also gained legal protections over the last century.</p>
+                            <a href="#afforestation" class="next-section alt">
+                                <span class="material-icons">expand_more</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="afforestation">
+                        <div class="text-wrapper">
+                            <h2>Fewer trees are being planted.</h2>
+                            <p>Conservation of forests is not such an issue in New Zealand anymore, though the regeneration of lost forests is still important. In the past 30 years, more trees have been planted than cut down. There was a particular boom in tree planting in the 1990s, though this has slowed down in recent years.
+                            </p>
+                            <a href="#deforestation" class="next-section alt">
+                                <span class="material-icons">expand_more</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="deforestation">
+                        <div class="text-wrapper">
+                            <h2>More trees are being cut down.</h2>
+                            <p>This decline of afforestation coupled with an increase in deforestation is detrimental to New Zealand’s carbon emissions. Many trees of the 1990s boom were planted for cultivation purposes. As such, when the trees from this “wall of wood” reach the age of maturity within the next decade, we will see another boom of deforestation. This highlights the importance of planting new permanent forests.
+                            </p>
+                            <a href="#future" class="next-section alt">
+                                <span class="material-icons">expand_more</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="history-graphs">
+                        <canvas id="history-graph" width="800" height="400" aria-label="New Zealand Afforestation and Deforestation" role="img">
+                            <p>Your browser does not support the canvas element.</p>
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="future" id="future">
+            <div class="main-wrapper" id="restoration">
+                <div class="text-wrapper">
+                    <h2>We need to restore our forests.</h2>
+                    <p>Although trees are not the only solution for climate change, they do prove to play an important role in absorbing carbon emissions and sustaining surrounding ecosystems. Therefore it’s more important than ever to conserve our existing forests and restore those that have been lost over time.</p>
+                    <p>Regenerating forests isn’t all about numbers and planting seeds in the ground. There are a lot of factors that should be considered. First, not just any tree can be planted. Planting monocultures (only one species) can actually damage the surrounding ecosystem. The best practice is to plant native species of trees.</p>
+                    <p>There is also a difference between planting plantations and permanent forests. The trees in plantation forests are planted specifically to be harvested in the future. On the other hand, permanent forests are replanted to permanently recover biodiversity and ecosystems.</p>
+                    <a href="#what" class="next-section"><span class="material-icons">expand_more</span></a>
+                </div>
+            </div>
+            <div class="main-wrapper" id="what">
+                <div class="text-wrapper">
+                    <h2>What is New Zealand doing?</h2>
+                    <p>Many countries and organisations have launched tree planting initiatives as a way to mitigate the effects of climate change. The New Zealand government launched their One Billion Trees programme in 2018, which aims to plant a billion trees by 2028. The many benefits of the programme include meeting climate change commitments, increasing biodiversity, providing employment and protecting natural resources.</p>
+                    <a href="#progress" class="next-section alt"><span class="material-icons">expand_more</span></a>
+                </div>
+            </div>
+            <div class="main-wrapper" id="progress">
+                <div class="text-wrapper">
+                    <h2>How much we've planted</h2>
+                    <div class="graph-1">
+                        <canvas id="graph-1" width="800" height="400" aria-label="New Zealand trees planted 2018-2021" role="img">
+                            <p>Your browser does not support the canvas element.</p>
+                        </canvas>
+                    </div>
+                    <p>Since the programme started in 2018, over 258 million trees have been planted throughout New Zealand, over a quarter of the way to the one billion trees goal. So far the programme itself has funded the planting of over 26 million trees. 48% of these are native species while 52% are exotic species.</p>
+                    <div class="graph-2">
+                        <canvas id="graph-2" width="800" height="600" aria-label="New Zealand tree planting grants by region" role="img">
+                            <p>Your browser does not support the canvas element.</p>
+                        </canvas>
+                    </div>
+                    <p>Landowners in every region of New Zealand have been granted funding to plant trees.</p>
+                    <div class="graph-3">
+                        <canvas id="graph-3" width="800" height="400" aria-label="Projected carbon sequestration" role="img">
+                            <p>Your browser does not support the canvas element.</p>
+                        </canvas>
+                    </div>
+                    <p>The One Billion Trees fund calculates that the potential carbon sequestration of their trees is approximately 2.6 million tonnes by 2030 and 11.4 million tonnes by 2050. This would counteract around a third of New Zealand’s annual agricultural emissions.</p>
+                    <a href="#outro" class="next-section alt"><span class="material-icons">expand_more</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="outro">
+            <div class="main-wrapper" id="outro">
+                <div class="text-wrapper">
+                    <h2>You can help!</h2>
+                    <p>Of course, replanting trees isn’t the silver bullet to solving climate change. It is only a portion of the larger effort to decrease carbon emissions and it should take place alongside other methods of mitigation. Nonetheless, the health and restoration of our native forests is important and should not be ignored.</p>
+                    <p>As an individual, you can also contribute to the initiative. Donate to tree-planting programmes or plant trees with your local community. Avoid buying environmentally harmful products, and try to shop ethically and environmentally instead. Engage with your local government and vote for politicians who champion climate action.</p>
+                    <p>There is a lot you can do to help save our forests and our Earth.</p>
+                    <button class="button" id="resources">Resources</button>
+                </div>
+            </div>
+            <div class="resources">
+                <div class="resource-popout">
+                    <h2>Resources</h2>
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="https://www.forestandbird.org.nz/" target=”_blank”>Forest and Bird</a></li>
+                        <li><a href="https://www.doc.govt.nz/get-involved/conservation-education/resources/experiencing-native-trees-in-your-green-space/" target=”_blank”>Department of Conservation</a></li>
+                        <li><a href="https://www.mpi.govt.nz/forestry/funding-tree-planting-research/one-billion-trees-programme/" target=”_blank”>One Billion Trees Programme</a></li>
+                    </ul>
+                    <h3>Donate and Volunteer</h3>
+                    <ul>
+                        <li><a href="https://www.treesthatcount.co.nz/" target=”_blank”>Trees That Count</a></li>
+                        <li><a href="https://onetreeplanted.org/" target=”_blank”>One Tree Planted</a></li>
+                        <li><a href="https://www.doc.govt.nz/get-involved/volunteer/" target=”_blank”>Department of Conservation</a></li>
+                        <li><a href="https://www.nfrt.org.nz/" target=”_blank”>Native Forest Restoration Trust</a></li>
+                    </ul>
+                    <button class="next-section" id="close">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Dio Ambudi 2021</p>
+        <p>This website and its content are for educational purposes only</p>
+    </footer>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

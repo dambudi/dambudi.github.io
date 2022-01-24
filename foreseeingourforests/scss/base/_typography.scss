@@ -1,0 +1,35 @@
+body {
+    font-family: omnes-pro, sans-serif;
+    font-size: 1.25rem;
+    // color: #052842;
+    color: #195613;
+}
+
+h1,
+h2,
+h3 {
+    font-family: kansasnew, serif;
+}
+
+h1 {
+    margin-top: 0;
+    // color: white;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+p {
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+a {
+    transition: 150ms ease;
+}
