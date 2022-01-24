@@ -1,0 +1,26 @@
+/* Base */
+/*  RESETS */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+canvas {
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+/* Components */
+/* Layout */
+nav {
+  position: fixed;
+  bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */
