@@ -1,0 +1,635 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #333;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+header,
+footer {
+    /* background-color: lightgray; */
+    color: white;
+    overflow: auto;
+}
+
+
+/* HEADER & NAVIGATION*/
+
+/* Navbar links */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+nav li {
+    margin-left: 16px;
+}
+
+nav.navbar a {
+    color: black;
+    box-shadow: 0 0 0 0 white;
+    transition: box-shadow 0.1s linear;
+}
+
+nav a.nav-news:hover {
+    box-shadow: 0 4px 0 -2px #0733C5;
+}
+
+nav a.nav-esports:hover {
+    box-shadow: 0 4px 0 -2px #2C29D4;
+}
+
+nav a.nav-community:hover {
+    box-shadow: 0 4px 0 -2px #7514F1;
+}
+
+nav a.nav-guides:hover {
+    box-shadow: 0 4px 0 -2px #990AFF;
+}
+
+nav a.selected {
+    box-shadow: 0 4px 0 -2px white;
+}
+
+nav a.nav-news-selected {
+    box-shadow: 0 4px 0 -2px #0733C5;
+}
+
+nav a.nav-esports-selected {
+    box-shadow: 0 4px 0 -2px #2C29D4;
+}
+
+nav a.nav-community-selected {
+    box-shadow: 0 4px 0 -2px #7514F1;
+}
+
+nav a.nav-guides-selected {
+    box-shadow: 0 4px 0 -2px #990AFF;
+}
+
+nav.nav-white a {
+    color: white;
+    box-shadow: 0 0 0 0 white;
+    transition: box-shadow 0.1s linear;
+}
+
+nav a.nav-white {
+    color: white
+}
+
+nav a.nav-white:hover {
+    box-shadow: 0 4px 0 -2px white;
+}
+
+.wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 16px 0 32px 0;
+}
+
+.wrapper2 {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.wrapper-nav,
+.wrapper-black {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+/* Navbar Logo */
+.wrapper-nav img {
+    height: 32px;
+    transition: 150ms;
+}
+
+.wrapper-nav img:hover {
+    transform: scale(1.05);
+}
+
+main{
+    min-height: calc(100vh - 140px);
+}
+
+/* HERO SECTION */
+
+.hero {
+    position: relative;
+    max-width: 1220px;
+    max-height: 640px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    transition: 150ms;
+}
+
+.hero-overlay,
+.hero-overlay-news,
+.hero-overlay-esports,
+.hero-overlay-community,
+.hero-overlay-guides {
+    position: absolute;
+    bottom: 64px;
+    right: 0;
+    width: 536px;
+    height: 256px;
+    padding: 16px 32px;
+
+}
+
+.hero-overlay {
+    background-color: white;
+}
+
+.hero-overlay-news {
+    background-color: #0733C5;
+}
+
+.hero-overlay-esports {
+    background-color: #2C29D4;
+}
+
+.hero-overlay-community {
+    background-color: #7514F1;
+}
+
+.hero-overlay-guides {
+    background-color: #990AFF;
+}
+
+.hero img:hover {
+    transform: scale(1.03);
+}
+
+.hero-overlay p:hover,
+.hero-overlay h3:hover {
+    color: #606060;
+}
+
+
+/* GRID SECTIONS */
+
+.grid-container,
+.grid-container-category,
+.grid-container-esports {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+}
+
+.grid-container-category {
+    padding-top: 16px;
+}
+
+.grid-container img,
+.grid-container-category img,
+.grid-container-esports img {
+    width: 100%;
+    transition: 150ms;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+}
+
+.hero-overlay p {
+    color: #333;
+}
+
+.background-news h3,
+.background-esports h3,
+.background-community h3,
+.background-guides h3 {
+    color: white;
+}
+
+.tag-news,
+.tag-esports,
+.tag-community,
+.tag-guides {
+    font-weight: 700;
+    font-size: 0.75em;
+}
+
+.grid-image {
+    max-width: 396px;
+    max-height: 223px;
+    overflow: hidden;
+}
+
+.grid-image-1x2 {
+    max-width: 808px;
+    max-height: 223px;
+    overflow: hidden;
+}
+
+.grid-image-2x2 {
+    max-width: 808px;
+    max-height: 573px;
+    overflow: hidden;
+}
+
+.grid-container img:hover,
+.grid-container-esports img:hover,
+.grid-container-community img:hover,
+.grid-container-category img:hover {
+    transform: scale(1.05);
+}
+
+.grid-container h3:hover,
+.grid-container-esports h3:hover,
+.grid-container-community h3:hover,
+.grid-container-category h3:hover {
+    color: #606060;
+}
+
+
+/* NEWS SECTION */
+
+.tag-news,
+h2.news {
+    color: #0733C5;
+}
+
+.tag-news:hover,
+h2.news:hover {
+    color: #0d60f6;
+}
+
+/* Divider line */
+hr.news {
+    border-top: 2px solid #0733C5;
+    margin: 0 0 32px 0;
+}
+
+
+/* ESPORTS SECTION */
+
+.tag-esports,
+h2.esports {
+    color: #2C29D4
+}
+
+.tag-esports:hover,
+h2.esports:hover {
+    color: #534dfa;
+}
+
+/* Divider line */
+hr.esports {
+    border-top: 2px solid #2C29D4;
+    margin: 0 0 32px 0;
+}
+
+.home-c1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.home-c2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.home-c3 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.esports-b1 {
+    grid-column: 1/3;
+}
+
+
+/* COMMUNITY SECTION */
+
+.tag-community,
+h2.community {
+    color: #7514F1
+}
+
+.tag-community:hover,
+h2.community:hover {
+    color: #9e1bfc;
+}
+
+.community-b5 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+/* Divider line */
+hr.community {
+    border-top: 2px solid #7514F1;
+    margin: 0 0 32px 0;
+}
+
+.home-d1 {
+    grid-column: 1;
+}
+
+.home-d2 {
+    grid-column: 2/4;
+}
+
+
+/* GUIDES SECTION */
+
+.tag-guides,
+h2.guides {
+    color: #990AFF;
+}
+
+.tag-guides:hover,
+h2.guides:hover {
+    color: #c50eff;
+}
+
+/* Divider line */
+hr.guides {
+    border-top: 2px solid #990AFF;
+    margin: 0 0 32px 0;
+}
+
+.guides-b2 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+
+.guides-b6 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+
+/* ARTICLE PAGES */
+
+p.caption {
+    margin: 0;
+    text-align: right;
+    padding-bottom: 16px;
+    font-size: 0.75em;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+p.date {
+    margin-top: 0;
+    padding-bottom: 16px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: auto 293px;
+    grid-column-gap: 16px;
+}
+
+.article {
+    padding: 0 103px;
+}
+
+/* .article p {
+    margin-top: 8px;
+} */
+
+.article h2, .article h3 {
+    padding-top: 16px;
+}
+
+h3.article-title {
+    padding: 0;
+}
+
+h3.quote {
+    padding: 32px 64px;
+}
+
+.article-img {
+    padding: 8px 0;
+}
+
+a.link {
+    color: #333;
+    padding-bottom: 16px;
+}
+
+a:hover.link {
+    color: #606060;
+}
+
+.author {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.author img {
+    width: 87px;
+    height: 87px;
+}
+
+.author p {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 0.75em;
+}
+
+.author-name {
+    margin-bottom: 8px;
+}
+
+/* LATEST STORIES SECTION/MORE LIKE THIS */
+
+.latest-stories {
+    margin-top: 64px;
+}
+
+h2.latest {
+    color: #333;
+    font-size: 1.25em;
+}
+
+/* h2.latest:hover {
+    filter: brightness(1.25);
+} */
+
+hr.black {
+    border-top: 2px solid #333;
+    margin: 0 0 32px 0;
+}
+
+hr.black2 {
+    border-top: 2px solid #333;
+    margin: 8px 0 8px 0;
+}
+
+
+/* ABOUT / CONTACT PAGES */
+
+.other-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 64px;
+    grid-row-gap: 32px;
+}
+
+.other-grid p {
+    padding-bottom: 32px;
+}
+
+/* Contact Form */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #333;
+    margin: 6px 0 16px 0;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+input[type=submit],
+button.page {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover,
+button.page:hover {
+    background-color: #333;
+}
+
+button.page-selected {
+    background-color: #e0e1e2;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.page-select {
+    margin: 32px 0;
+    text-align: center;
+}
+
+/* FOOTER */
+
+.background-black {
+    background-color: black;
+}
+
+.wrapper-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.footer a {
+    color: white;
+    box-shadow: 0 0 0 0 white;
+    transition: box-shadow 0.1s linear;
+}
+
+nav a.nav-white-selected {
+    box-shadow: 0 4px 0 -2px white;
+}
+
+
+/* WHITE TEXT ON COLOUR SECTIONS / OVERRIDES */
+
+.background-news {
+    background-color: #0733C5;
+}
+
+.background-esports {
+    background-color: #2C29D4;
+}
+
+.background-community {
+    background-color: #7514F1;
+}
+
+.background-guides {
+    background-color: #990AFF;
+}
+
+.background-news h2,
+.background-news a,
+.background-esports h2,
+.background-esports a,
+.background-community h2,
+.background-community a,
+.background-guides h2,
+.background-guides a,
+.background-footer {
+    color: white;
+}
+
+/* White divider line */
+hr.white {
+    border-top: 2px solid white;
+    margin: 0 0 32px 0;
+}
+
+.background-news h3:hover,
+.background-esports h3:hover,
+.background-community h3:hover,
+.background-guides h3:hover,
+.background-news h2:hover,
+.background-esports h2:hover,
+.background-community h2:hover,
+.background-guides h2:hover,
+.background-news a:hover,
+.background-esports a:hover,
+.background-community a:hover,
+.background-guides a:hover {
+    color: #e0e1e2;
+}
+
+/* p, a, label, input, textarea {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 22px;
+} */
