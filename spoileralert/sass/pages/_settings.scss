@@ -1,0 +1,106 @@
+/* Settings Page */
+.settings {
+    .setting {
+        // background-color: blue;
+        display: flex;
+        // justify-content: space-between;
+        // margin-bottom: 24px;
+        max-width: 400px;
+        padding: 16px;
+        transition: 150ms ease;
+        border-radius: $small-corner;
+
+        img {
+            height: 44px;
+            width: 44px;
+            border-radius: $small-corner;
+        }
+
+/*         .facebook {
+            background-color: $white;
+        } */
+
+/*         label {
+            margin-right: 16px;
+        } */
+
+        input[type=checkbox] {
+            margin-left: auto;
+        }
+    }
+    .setting:hover {
+        background-color: rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+    }
+
+    .app-setting {
+        font-weight: 500;
+        margin-left: 16px;
+    }
+
+    h2 {
+        margin: 8px 16px;
+        font-size: 1.75rem;
+        font-weight: 600;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin: 8px 0;
+            grid-column: span 2;
+        }
+
+        @media (min-width: $breakpoint-laptop) {
+            grid-column: span 3;
+        }
+    }
+
+    .main-wrapper {
+        // padding: 16px;
+        margin-top: 56px;
+        // margin-bottom: 80px;
+        max-width: 400px;
+        display: grid;
+        // gap: 24px;
+
+        @media (min-width: $breakpoint-large-phone) {
+            gap: 16px;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 1200px;
+            // gap: 16px;
+        }
+
+        @media (min-width: $breakpoint-laptop) {
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 84px;
+            // gap: 48px;
+        }
+    }
+
+    .filtered-apps {
+        opacity: 100%;
+        padding-bottom: 16px;
+    }
+
+    .filtered-apps.hide {
+        opacity: 50%;
+        pointer-events: none;
+        transition: 150ms ease;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 16px 16px 96px 16px;
+        @media (min-width: $breakpoint-large-phone) {
+            margin: 0 auto 96px auto;
+        }
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: 16px;
+        }
+        @media (min-width: $breakpoint-laptop) {
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+    }
+}

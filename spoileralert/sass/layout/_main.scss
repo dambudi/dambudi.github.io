@@ -1,0 +1,23 @@
+/* LAYOUT */
+main {
+/*     background: rgb(35,35,35);
+    background: linear-gradient(0deg, rgba(35,35,35,1) 0%, rgba(79,79,79,1) 100%); */
+    margin-top: 48px;
+    min-height: calc(100vh - 128px);
+    @media (min-width: $breakpoint-laptop) {
+        min-height: calc(100vh - 48px);
+    }
+    .main-wrapper {
+        // transition: 250ms ease;
+        padding: 0;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        @media (min-width: $breakpoint-large-phone) {
+            padding: 16px;
+        }
+        @media (min-width: $breakpoint-laptop) {
+            padding: 32px 16px;
+        }
+    }
+}

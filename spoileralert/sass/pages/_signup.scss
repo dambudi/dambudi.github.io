@@ -1,0 +1,78 @@
+/* Sign Up Page */
+.signup {
+    height: calc(100vh - 48px);
+    display: grid;
+    @media (min-width: $breakpoint-laptop) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: ". . . signup signup .";
+    }
+    .main-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 16px 16px 32px 16px;
+        max-width: 400px;
+        @media (min-width: $breakpoint-laptop) {
+            width: 400px;
+            grid-area: signup;
+            justify-content: center;
+        }
+        .social-signin {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            .btn {
+                font-size: 1.5rem;
+                font-weight: 400;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 8px;
+                img {
+                    height: 32px;
+                }
+                span {
+                    width: 100%;
+                }
+            }
+            p {
+                font-size: 1.5rem;
+                grid-column: span 2;
+            }
+        }
+        form {
+            text-align: center;
+            .btn {
+                margin-bottom: 16px;
+            }
+            p {
+                margin: 0;
+            }
+            hr {
+                // border: 1px solid white;
+                margin: 16px 0;
+            }
+            a {
+                color: $slight-white;
+                text-decoration: underline;
+            }  
+        }
+    }
+    .signup-step {
+        height: 100%;
+        text-align: center;
+        @media (min-width: $breakpoint-laptop) {
+            height: auto;
+            justify-self: center;
+        }
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+        }
+    }
+}

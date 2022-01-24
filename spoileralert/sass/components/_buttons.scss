@@ -1,0 +1,218 @@
+/* Buttons */
+.material-icons-outlined {
+    font-size: 4rem;
+    // margin-right: 16px;
+}
+
+.icon {
+    display: inline-block;
+    padding: 8px;
+    margin-right: 16px;
+    background-color: #232323;
+    color: #FFFFFF;
+    border-radius: 8px;
+    margin-top: 16px;
+    .material-icons-outlined {
+        font-size: 3rem;
+        margin-right: 0;
+    }
+
+}
+
+.btn {
+    background-color: $dark-grey;
+    border: none;
+    // border: 1px solid white;
+    width: 100%;
+    max-width: 44px;
+    height: 56px;
+    border-radius: $small-corner;
+    padding: 4px 0;
+    align-self: flex-end;
+    transition: 150ms ease;
+    .material-icons-outlined {
+        margin-top: 2px;
+        font-size: 2rem;
+        margin-right: 0;
+        color: $slight-white;
+    }
+}
+
+.btn:hover {
+    // background-color: rgba(255, 255, 255, 0.1);
+    // filter: brightness(0.9);
+    background-color: $dark-grey-darker;
+    cursor: pointer;
+}
+
+.wide {
+    max-width: 400px;
+    // padding: 16px;
+    font-size: 1.75rem;
+    font-weight: 500;
+    border-radius: $medium-corner;
+}
+
+.red {
+    background-color: $alert-red;
+    color: #FFFFFF;
+    transition: 100ms ease;
+}
+
+.red:hover {
+    background-color: $alert-red-darker;
+}
+
+/* .red:active {
+    background-color: #790002;
+  } */
+
+.grey {
+    background-color: $mid-grey;
+    transition: 100ms ease;
+}
+
+.grey:hover {
+    // background-color: rgba(255, 255, 255, 0.1);
+    background-color: $mid-grey-darker;
+}
+
+.outline {
+    background-color: $dark-grey;
+    color: $slight-white;
+    border: 2px solid $slight-white;
+    transition: 100ms ease;
+}
+
+.outline:hover {
+    // background-color: $mid-grey;
+    // background-color: rgba(255, 255, 255, 0.1);
+    background-color: $dark-grey-darker;
+    cursor: pointer;
+}
+
+/* .outline:active {
+    background-color: $dark-grey;
+    color: $mid-grey;
+    border: 2px solid $mid-grey;
+} */
+
+
+/* #hide-filter {
+    background-color: transparent;
+} */
+
+input[type=button] {
+    padding: 8px 16px;
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 16px;
+    margin-top: 16px;
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.btn-normal {
+    background-color: #D51C29;
+    border: 2px solid #D51C29;
+    color: #FFFFFF;
+}
+
+.btn-outline-normal {
+    border: 2px solid #D51C29;
+    color: #D51C29;
+}
+
+.btn-hover {
+    background-color: #db3d48;
+    border: 2px solid #db3d48;
+    color: #FFFFFF;
+}
+
+.btn-outline:hover {
+    background-color: #f8dddf;
+    border: 2px solid #D51C29;
+    color: #D51C29;
+}
+
+/* .btn:active {
+    background-color: #790002;
+    border: 2px solid #790002;
+    color: #FFFFFF;
+} */
+
+/* .btn-outline:active {
+    border: 2px solid #790002;
+    color: #790002;
+} */
+
+.form {
+    padding: 16px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 250px;
+    background-color: #818181;
+    font-size: 1.25rem;
+    color: #E4E6EB;
+}
+
+.settings p {
+    margin: 0 0 8px 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+label,
+button,
+.link-item,
+.catchup-header {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    display: inline;
+    background-color: $mid-grey;
+    border-radius: $small-corner;
+    margin: 0;
+    width: 100%;
+    max-width: 44px;
+    max-height: 44px;
+    padding: 0.5em;
+    transition: 100ms ease;
+    // border: 8px solid $mid-grey;
+}
+
+
+input[type=checkbox]:hover {
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked::after {
+    content: "";
+    display: block;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    top: -4px;
+    left: -4px;
+    background-color: $slight-white;
+    z-index: 50;
+    border-radius: $small-corner;
+}

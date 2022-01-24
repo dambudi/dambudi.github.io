@@ -1,0 +1,83 @@
+/* Log In Page */
+.login {
+    // background-color: green;
+    height: calc(100vh - 48px);
+    display: grid;
+
+    @media (min-width: $breakpoint-laptop) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: ". . . login login .";
+    }
+
+    .main-wrapper {
+        // background-color: yellow;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 16px 16px 32px 16px;
+        max-width: 400px;
+        @media (min-width: $breakpoint-laptop) {
+            width: 400px;
+            grid-area: login;
+            justify-content: center;
+        }
+
+        .social-signin {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+
+            .btn {
+                font-size: 1.5rem;
+                font-weight: 400;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 8px;
+
+                img {
+                    height: 32px;
+                }
+
+                span {
+                    width: 100%;
+                }
+            }
+        }
+
+        form {
+            text-align: center;
+
+            .btn {
+                margin-bottom: 16px;
+            }
+
+            a {
+                padding-top: 16px;
+                color: $slight-white;
+            }
+        }
+    }
+
+
+}
+
+.login-header {
+    @media (min-width: $breakpoint-laptop) {
+        width: calc(100% / 3);
+    }
+    .header-wrapper {
+            @media (min-width: $breakpoint-laptop) {
+                background-color: blue;
+                background-color: $alert-red;
+                position: absolute;
+                top: 0;
+                height: 100vh;
+                width: 100%;
+                margin: 0 auto;
+            }
+/*         .title-bar {
+        } */
+    }
+}

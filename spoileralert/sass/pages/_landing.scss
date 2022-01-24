@@ -1,0 +1,110 @@
+/* Landing Page */
+.landing {
+    // background-color: green;
+    height: calc(100vh - 48px);
+    display: grid;
+
+    @media (min-width: $breakpoint-laptop) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: ". . . landing landing .";
+    }
+
+    .main-wrapper {
+        // background-color: yellow;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 16px 16px 32px 16px;
+        max-width: 400px;
+
+        @media (min-width: $breakpoint-laptop) {
+            width: 400px;
+            grid-area: landing;
+            justify-content: center;
+        }
+
+        .landing-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+}
+
+.landing-header {
+    @media (min-width: $breakpoint-laptop) {
+        top: -64px;
+    }
+
+    .logo-bar {
+        animation: 3s ease 0s 1 slideUp;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        // transition: 250ms ease;
+        background-color: $alert-red;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+        @media (min-width: $breakpoint-laptop) {
+            animation: none;
+            animation: 3s ease 0s 1 slideLeft;
+            position: absolute;
+            top: 64px;
+            height: 100vh;
+            width: calc(100% / 3);
+            // max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: auto;
+            height: 36px;
+            animation: 3s ease 0s 1 fadeIn;
+            transition: 500ms ease;
+
+            @media (min-width: $breakpoint-laptop) {
+                height: 64px;
+            }
+        }
+    }
+
+    @keyframes slideUp {
+
+        0%,
+        50% {
+            height: 100vh;
+        }
+
+        100% {
+            height: 48px;
+        }
+    }
+
+    @keyframes slideLeft {
+
+        0%,
+        50% {
+            width: 100vw;
+        }
+
+        100% {
+            width: calc(100% / 3);
+        }
+    }
+
+    @keyframes fadeIn {
+
+        0%,
+        10% {
+            opacity: 0;
+        }
+
+        40%,
+        100% {
+            opacity: 100%;
+        }
+    }
+}
